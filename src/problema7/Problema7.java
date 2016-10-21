@@ -16,9 +16,9 @@ public class Problema7 {
      */
     public static void main(String[] args) {
        float km,o;
-       km=solicitarDato();
+       km=solicitarDato();   //se solicita dato
        o=operacion(km);
-        System.out.println("Gracias por usar el programa"); //agradecemos por usar el programa       
+       mensajeSalida();  
     }
     public static float solicitarDato(){
         float km;
@@ -29,10 +29,13 @@ public class Problema7 {
        
     }
     public static float operacion(float km){
-    float r;
+    float r;             //se hace la operacion
     r= (float) ((km*1000)/3600);
     System.out.println(km + " es igual a: " + r);
     return r;
 }
-    
+    public static void mensajeSalida(){
+        System.out.println("Gracias por usar el programa"); //se agradece
+        System.exit(0);//Sale del programa
+}
 }
